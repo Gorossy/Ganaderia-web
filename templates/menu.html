@@ -1,0 +1,36 @@
+{% extends "base2.html" %}
+
+{% block formulario %}
+
+    <div class="container background-gray-lighter">
+        <div class="row margin-vert-40">
+            <div class="col-md-4">
+                <div class="col-md-4">
+                    <i class="fa-clock-o fa-5x color-primary"></i>
+                </div>
+                <div class="col-md-8">
+                    <h2 class="margin-top-5 margin-bottom-0">{{conteo2}}</h2>
+                    <p>ANIMALES TOTALES</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-4">
+                    <i class="fa-tachometer fa-5x color-primary"></i>
+                </div>
+                <div class="col-md-8">
+                    <h2 class="margin-top-5 margin-bottom-0">{{conteo3}}</h2>
+                    <p>CANTIDAD DE VETERINARIOS</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-4">
+                    <i class="fa-users fa-5x color-primary"></i>
+                </div>
+                <div class="col-md-8">
+                    <h2 class="margin-top-5 margin-bottom-0">{{conteo}}</h2>
+                    <p>CLIENTES SATISFECHOS</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

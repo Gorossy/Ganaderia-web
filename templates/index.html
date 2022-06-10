@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+    <body>
+        <div id="content">
+        <div class="container background-white">
+            <div class="row margin-vert-30">
+                        <!-- Main Text -->
+                <div class="col-md-12">
+                    <h2 class="text-center">Bienvenido a Ganaderia Toros & Vacas sas.</h2>
+                    <p class="text-center">Somos una empresa encargada de desarrollar un modelo de agro negocio a través de diferentes canales nacionales y a través del internet, en el cual se promocionan productos y servicios exclusivos, destinados a las actividades
+                                agropecuarias, con el fin de disminuir los costos de producción de las explotaciones pecuarias.</p>
+
+                </div>
+                        <!-- End Main Text -->
+            </div>
+        </div>
+    <div class="container background-gray-lighter">
+        <div class="row padding-vert-20">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <!-- Portfolio -->
+                <ul class="portfolio-group">
+                    <!-- Portfolio Item -->
+                    <li class="portfolio-item col-sm-6 col-xs-6 padding-20">
+                        <a href="#">
+                            <figure class="animate fadeInLeft">
+                                <img src="{% static 'assets/img/portfolio/producto1.jpg'%}"  alt="image1" />
+                                <figcaption>
+                                    <h3>TOROS</h3>
+                                    <span>Nuestros toros se le provee el mejor cuidado con veterinarios profesionales junto a una gran alimentación. El 80% de nuestros tienen una efectividad alta en mantener la raza.</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <!-- //Portfolio Item// -->
+                    <!-- Portfolio Item -->
+                    <li class="portfolio-item col-sm-6 col-xs-6 padding-20">
+                        <a href="#">
+                            <figure class="animate fadeInRight">
+                                <img alt="image2" src="{% static 'assets/img/portfolio/producto2.jpg'%}">
+                                <figcaption>
+                                    <h3>VACAS</h3>
+                                    <span>Seleccionadas cuidadosamente para ser vacas lecheras, produciendo más de 40 litros diariamente y de la mejor calidad. </span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <!-- //Portfolio Item// -->
+                    <!-- Portfolio Item -->
+                    <li class="portfolio-item col-sm-6 col-xs-6 padding-20">
+                        <a href="#">
+                            <figure class="animate fadeInLeft">
+                                <img alt="image3" src="{% static 'assets/img/portfolio/producto3.jpg'%}">
+                                <figcaption>
+                                    <h3>PAJILLAS</h3>
+                                    <span>La posibilidad de que salga una raza dominante es de 90%, estas son guardados a temperaturas adecuada en nitrógeno.</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <!-- //Portfolio Item// -->
+                    <!-- Portfolio Item -->
+                    <li class="portfolio-item col-sm-6 col-xs-6 padding-20">
+                        <a href="#">
+                            <figure class="animate fadeInRight">
+                                <img alt="image4" src="{% static 'assets/img/portfolio/producto11.jpeg'%}">
+                                <figcaption>
+                                    <h3>ANIMALES DE ENGORDE</h3>
+                                    <span>Pioneros en carnes frescas en el país, por el cuidado a nuestros animales.</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <!-- //Portfolio Item// -->
+                    <!-- Portfolio Item -->
+                    <li class="portfolio-item col-sm-6 col-xs-6 padding-20">
+                        <a href="#">
+                            <figure class="animate fadeInLeft">
+                                <img alt="image5" src="{% static 'assets/img/portfolio/Veterinarios.jpg'%}">
+                                <figcaption>
+                                    <h3>VETERINARIOS</h3>
+                                    <span>Contamos con un conjunto de profesionales contratados con la mejor disposción al crecimiento y cuidado de nuestros animales.</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <!-- //Portfolio Item// -->
+                    <!-- Portfolio Item -->
+                    <li class="portfolio-item col-sm-6 col-xs-6 padding-20">
+                        <a href="#">
+                            <figure class="animate fadeInRight">
+                                <img alt="image6" src="{% static 'assets/img/portfolio/vacuna.jpg'%}">
+                                <figcaption>
+                                    <h3>VACUNAS</h3>
+                                    <span>Nuestros proveedores en el extranjero nos proporcionan las diferentes vacunas para la prevención de las principales enfermedades.</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                                <!-- //Portfolio Item// -->
+                </ul>
+                            <!-- End Portfolio -->
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+        <div class="row margin-vert-40">
+            <div class="col-md-4">
+                <div class="col-md-4">
+                    <i class="fa-clock-o fa-5x color-primary"></i>
+                </div>
+                <div class="col-md-8">
+                    <h2 class="margin-top-5 margin-bottom-0">{{conteo2}}</h2>
+                    <p>ANIMALES TOTALES</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-4">
+                    <i class="fa-tachometer fa-5x color-primary"></i>
+                </div>
+                <div class="col-md-8">
+                    <h2 class="margin-top-5 margin-bottom-0">{{conteo3}}</h2>
+                    <p>CANTIDAD DE VETERINARIOS</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-4">
+                    <i class="fa-users fa-5x color-primary"></i>
+                </div>
+                <div class="col-md-8">
+                    <h2 class="margin-top-5 margin-bottom-0">{{conteo}}</h2>
+                    <p>CLIENTES SATISFECHOS</p>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- === END CONTENT === -->
+{% endblock %}

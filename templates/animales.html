@@ -1,0 +1,12 @@
+{% extends "base2.html" %}
+
+{% block formulario %}
+    <form class="datosrelleno" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button  type="submit">Aceptar</button>
+    </form>
+
+{% endblock %}
+
+

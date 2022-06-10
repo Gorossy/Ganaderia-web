@@ -1,0 +1,251 @@
+
+<!-- === BEGIN HEADER === -->
+<!DOCTYPE html>
+{% load static %}
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+
+    <head>
+        <!-- Title -->
+        <title>Toros & Vacas</title>
+        <link rel="shortcut icon" href= {% static 'assets/img/portfolio/producto2.jpg'%} />
+        <!-- Meta -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <!-- Favicon -->
+        <link href="favicon.ico" rel="shortcut icon">
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css'%}" rel="stylesheet">
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'assets/css/font-awesome.css'%}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'assets/css/nexus.css'%}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'assets/css/responsive.css'%}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'assets/css/custom.css'%}" rel="stylesheet">
+        <!-- Google Fonts-->
+        <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=PT+Sans" type="text/css" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div id="body-bg">
+            <div id="header">
+                <div class="container">
+                    <a href="{% url "index" %}" title="">
+                        <img src="{% static 'assets/img/logo.png'%}" alt="Logo" />
+                    </a>
+                </div>
+                        <!-- End Logo -->
+
+            </div>
+            <!-- Top Menu -->
+            <div id="hornav" class="container no-padding">
+                <div class="row">
+                    <div class="col-md-12 no-padding">
+                        <div class="text-center visible-lg">
+                            <ul id="hornavmenu" class="nav navbar-nav">
+                                {% if user.is_authenticated %}
+                                    <li>
+                                        <a href='{% url "registro" %}' class="fa-font">Registrar Administrador</a>
+                                    </li>
+                                    <li>
+                                        <a href='{% url "logout" %}' class="fa-font">Logout</a>
+                                    </li>
+
+                                    <li class="parent">
+                                        <span>Registros</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="">Agregar animales</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Registrar Ventas</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Registrar Pajillas</a>
+                                                </li>
+                                                <li class="parent">
+                                                    <span>Vacas Madres</span>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="">Registrar Inseminaciones</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Registrar Embarazos</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Registrar Partos</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">Registro Alimentacion</a>
+                                                </li>
+                                            </ul>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Estado Actual</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="">Ver ventas</a> <!-- mostrar las pajillas disponibles -->
+                                                </li>
+                                                <li>
+                                                    <a href="">Toros</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Vacas</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Vacas</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Historial Enfermedades</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Historial de vacunas</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Historial de bajas</a>
+                                                </li>
+
+                                            </ul>
+                                    </li>
+
+                                {% else %}
+                                    <li>
+                                        <a href='{% url "index" %}' title=" " class="fa-home">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href='{% url "productos" %}' class="fa-th">Productos</a>
+                                    </li>
+
+                                    <li>
+                                        <a href='{% url "nosotros" %}' class="fa-copy">Sobre Nosotros</a>
+                                    </li>
+
+                                    <li>
+                                        <a href='{% url "contact" %}' class="fa-comment">Contact</a>
+                                    </li>
+                                    <li>
+                                        <a href='{% url "login" %}' class="fa-font">Login</a>
+                                    </li>
+                                {% endif %}
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Top Menu -->
+
+            <div id="content-top-border" class="container">
+            </div>
+            <!-- === END HEADER === -->
+            <!-- === BEGIN CONTENT === -->
+            {% block content %}
+            {% endblock %}
+            <!-- === BEGIN FOOTER === -->
+            <div id="content-bottom-border" class="container">
+            </div>
+            <div id="base">
+                <div class="container padding-vert-30 margin-top-60">
+                    <div class="row">
+                        <!-- Contact Details -->
+                        <div class="col-md-4 margin-bottom-20">
+                            <h3 class="margin-bottom-10">Informacion de Contacto</h3>
+                            <p>
+                                <span class="fa-phone">Telefono:</span>(+57)348-20-88
+                                <br>
+                                <span class="fa-envelope">Email:</span>
+                                <a>info@torosandvacas.com</a>
+                                <br>
+                                <span class="fa-link">Sitio Web:</span>
+                                <a >www.torosandvacas.com</a>
+                            </p>
+                            <p>Barranquilla,
+                                <br>Atlantico,
+                                <br>co, ltda</p>
+                        </div>
+                        <!-- End Contact Details -->
+                        <!-- Sample Menu -->
+                        <div class="col-md-3 margin-bottom-20">
+                            <h3 class="margin-bottom-10">Menu</h3>
+                            <ul class="menu">
+                                <li>
+                                    <a class="fa-tasks" href="#">Empresa lider en ganaderia</a>
+                                </li>
+                                <li>
+                                    <a class="fa-users" href="#">Red de usuarios</a>
+                                </li>
+                                <li>
+                                    <a class="fa-signal" href="#">Alta fiabilidad</a>
+                                </li>
+                                <li>
+                                    <a class="fa-coffee" href="#">Citas personalizadas</a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <!-- End Sample Menu -->
+
+                        <!-- Disclaimer -->
+
+                        <!-- End Disclaimer -->
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Menu -->
+            <div id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div id="footermenu" class="col-md-8">
+                            <ul class="list-unstyled list-inline">
+                                <li>
+                                    <a href="#" target="_blank">Sample Link</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">Sample Link</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">Sample Link</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">Sample Link</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="copyright" class="col-md-4">
+                            <p class="pull-right">(c) 2014 Your Copyright Info</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Footer Menu -->
+            <!-- JS -->
+            <script type="text/javascript" src="{% static 'assets/js/jquery.min.js'%}" type="text/javascript"></script>
+            <script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js'%}" type="text/javascript"></script>
+            <script type="text/javascript" src="{% static 'assets/js/scripts.js'%}"></script>
+            <!-- Isotope - Portfolio Sorting -->
+            <script type="text/javascript" src="{% static 'assets/js/jquery.isotope.js'%}" type="text/javascript"></script>
+            <!-- Mobile Menu - Slicknav -->
+            <script type="text/javascript" src="{% static 'assets/js/jquery.slicknav.js'%}" type="text/javascript"></script>
+            <!-- Animate on Scroll-->
+            <script type="text/javascript" src="{% static 'assets/js/jquery.visible.js'%}" charset="utf-8"></script>
+            <!-- Sticky Div -->
+            <script type="text/javascript" src="{% static 'assets/js/jquery.sticky.js'%}" charset="utf-8"></script>
+            <!-- Slimbox2-->
+            <script type="text/javascript" src="{% static 'assets/js/slimbox2.js'%}" charset="utf-8"></script>
+            <!-- Modernizr -->
+            <script src="{% static 'assets/js/modernizr.custom.js'%}" type="text/javascript"></script>
+            <!-- End JS -->
+    </body>
+</html>
+<!-- === END FOOTER === -->
