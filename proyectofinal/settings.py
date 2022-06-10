@@ -27,7 +27,7 @@ SECRET_KEY = '3hcofrqnfvn)lek1#cm8p2^o!s3)-ij)fn8$_nl!h-&#8d#evj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ganaderia-app.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
